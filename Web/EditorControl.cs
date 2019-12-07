@@ -1284,7 +1284,7 @@ namespace DNNConnect.CKEditorProvider.Web
         {
             ClientResourceManager.RegisterStyleSheet(Page, Globals.ResolveUrl("~/Providers/HtmlEditorProviders/DNNConnect.CKE/css/CKEditorToolBars.css"));
             ClientResourceManager.RegisterStyleSheet(Page, Globals.ResolveUrl("~/Providers/HtmlEditorProviders/DNNConnect.CKE/css/CKEditorOverride.css"));
-            ClientResourceManager.RegisterStyleSheet(Page, Globals.ResolveUrl("~/Providers/HtmlEditorProviders/DNNConnect.CKE/js/ckeditor/4.5.3/editor.css"));
+            ClientResourceManager.RegisterStyleSheet(Page, Globals.ResolveUrl("~/Providers/HtmlEditorProviders/DNNConnect.CKE/js/ckeditor/editor.css"));
 
             ClientScriptManager cs = Page.ClientScript;
 
@@ -1303,11 +1303,11 @@ namespace DNNConnect.CKEditorProvider.Web
                     this, csType, "jquery_registered", "//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js");
             }
 
-            if (File.Exists(Context.Server.MapPath("~/Providers/HtmlEditorProviders/DNNConnect.CKE/js/ckeditor/4.5.3/ckeditor.js"))
+            if (File.Exists(Context.Server.MapPath("~/Providers/HtmlEditorProviders/DNNConnect.CKE/js/ckeditor/ckeditor.js"))
                 && !cs.IsClientScriptIncludeRegistered(csType, CsName))
             {
                 cs.RegisterClientScriptInclude(
-                    csType, CsName, Globals.ResolveUrl("~/Providers/HtmlEditorProviders/DNNConnect.CKE/js/ckeditor/4.5.3/ckeditor.js"));
+                    csType, CsName, Globals.ResolveUrl("~/Providers/HtmlEditorProviders/DNNConnect.CKE/js/ckeditor/ckeditor.js"));
             }
 
             if (

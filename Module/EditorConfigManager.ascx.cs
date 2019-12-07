@@ -304,8 +304,8 @@ namespace DNNConnect.CKEditorProvider.Module
                                Value = "h",
                                ImageUrl = 
                                hostSettingsExist
-                                    ? "../js/ckeditor/4.5.3/images/HostHasSetting.png"
-                                    : "../js/ckeditor/4.5.3/images/HostNoSetting.png",
+                                    ? "../js/ckeditor/images/HostHasSetting.png"
+                                    : "../js/ckeditor/images/HostNoSetting.png",
                                Expanded = true,
             };
 
@@ -337,8 +337,8 @@ namespace DNNConnect.CKEditorProvider.Module
                 Value = $"p{portal.PortalID}",
                 ImageUrl =
                     portalSettingsExists
-                        ? "../js/ckeditor/4.5.3/images/PortalHasSetting.png"
-                        : "../js/ckeditor/4.5.3/images/PortalNoSetting.png",
+                        ? "../js/ckeditor/images/PortalHasSetting.png"
+                        : "../js/ckeditor/images/PortalNoSetting.png",
                 Expanded = PortalOnly.Checked
             };
 
@@ -371,8 +371,8 @@ namespace DNNConnect.CKEditorProvider.Module
             Func<int, bool> getParentIdCheck = x => x != -1;
             Func<TabInfo, string> getNodeImageURL =
                 x => SettingsUtil.CheckSettingsExistByKey(editorHostSettings, $"DNNCKT#{x.TabID}#")
-                    ? "../js/ckeditor/4.5.3/images/PageHasSetting.png"
-                    : "../js/ckeditor/4.5.3/images/PageNoSetting.png";
+                    ? "../js/ckeditor/images/PageHasSetting.png"
+                    : "../js/ckeditor/images/PageNoSetting.png";
 
             TreeViewHelper<int> tvh = new TreeViewHelper<int>();
             tvh.LoadNodes(tabs, portalNode.ChildNodes, getNodeId, getParentId, getNodeText, getNodeValue, getNodeImageURL, getParentIdCheck, modulesNodes);
@@ -391,8 +391,8 @@ namespace DNNConnect.CKEditorProvider.Module
                     Text = m.ModuleTitle,
                     ImageUrl =
                         SettingsUtil.CheckSettingsExistByKey(editorHostSettings, $"DNNCKMI#{m.ModuleID}#INS#")
-                            ? "../js/ckeditor/4.5.3/images/ModuleHasSetting.png"
-                            : "../js/ckeditor/4.5.3/images/ModuleNoSetting.png"
+                            ? "../js/ckeditor/images/ModuleHasSetting.png"
+                            : "../js/ckeditor/images/ModuleNoSetting.png"
                 };
 
                 if (modulesNodes.ContainsKey(m.TabID))
